@@ -57,7 +57,6 @@ namespace SimpleCalculator
 
             // 화면에는 ÷로 다시 표시
             string displayOperator = currentOperator == "/" ? "÷" : currentOperator;
-
             // 계산식 표시
             txtDisplay.Text = $"{firstNumber} {displayOperator} {secondNumber} = {result}";
         }
@@ -65,11 +64,11 @@ namespace SimpleCalculator
         private void btnOperator_Click(object sender, EventArgs e)
         {
             // 입력값 없으면 종료
-            if (txtDisplay.Text == "") return; 
+            if (txtDisplay.Text == "") return;
             // 클릭된 버튼 가져오기
-            Button btn = sender as Button; 
+            Button btn = sender as Button;
             // 첫 번째 숫자 저장
-            firstNumber = int.Parse(txtDisplay.Text); 
+            firstNumber = int.Parse(txtDisplay.Text);
 
             //버튼 Text를 내부 연산자로 변환
             if (btn.Text == "÷") // 나누기 버튼이면
@@ -77,7 +76,29 @@ namespace SimpleCalculator
             else
                 currentOperator = btn.Text; // 나머지는 그대로 사용
             // 다음 입력을 위해 초기화
-            txtDisplay.Clear(); 
+            txtDisplay.Clear();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            // 입력창 초기화
+            txtDisplay.Clear();
+            // 결과창 초기화
+            txtResult.Clear();
+            // 첫 번째 숫자 초기화
+            firstNumber = 0;
+            // 연산자 초기화
+            currentOperator = ""; 
+        }
+
+        private void btnClearEntry_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -46,6 +46,9 @@
             btnSub = new Button();
             btnMul = new Button();
             btnDiv = new Button();
+            btnClear = new Button();
+            btnClearEntry = new Button();
+            btnDelete = new Button();
             SuspendLayout();
             // 
             // txtDisplay
@@ -241,11 +244,47 @@
             btnDiv.UseVisualStyleBackColor = true;
             btnDiv.Click += btnOperator_Click;
             // 
+            // btnClear
+            // 
+            btnClear.Font = new Font("맑은 고딕", 16.2F, FontStyle.Bold);
+            btnClear.Location = new Point(246, 123);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(111, 67);
+            btnClear.TabIndex = 20;
+            btnClear.Text = "c";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
+            // 
+            // btnClearEntry
+            // 
+            btnClearEntry.Font = new Font("맑은 고딕", 16.2F, FontStyle.Bold);
+            btnClearEntry.Location = new Point(129, 123);
+            btnClearEntry.Name = "btnClearEntry";
+            btnClearEntry.Size = new Size(111, 67);
+            btnClearEntry.TabIndex = 21;
+            btnClearEntry.Text = "CE";
+            btnClearEntry.UseVisualStyleBackColor = true;
+            btnClearEntry.Click += btnClearEntry_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Font = new Font("맑은 고딕", 16.2F, FontStyle.Bold);
+            btnDelete.Location = new Point(12, 123);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(111, 67);
+            btnDelete.TabIndex = 22;
+            btnDelete.Text = "DEL";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(500, 543);
+            Controls.Add(btnDelete);
+            Controls.Add(btnClearEntry);
+            Controls.Add(btnClear);
             Controls.Add(btnDiv);
             Controls.Add(btnMul);
             Controls.Add(btnSub);
@@ -292,5 +331,8 @@
         private Button btnSub;
         private Button btnMul;
         private Button btnDiv;
+        private Button btnClear;
+        private Button btnClearEntry;
+        private Button btnDelete;
     }
 }
