@@ -10,10 +10,12 @@
 		- Label: 프로그램 이름 표시
 	- 사용한 기술과 구현한 기능:
 		- Visual Studio를 이용하여 UI 디자인
-		-int.Parse(txtDisplay.Text); 로 인한 텍스트 정수 변환
-		-Button btn = sender as Button; 로 클릭된 버튼을 Button 타입으로 변환
-		-btnNumber_Click에 참조를 여러개 연결해 여러 숫자 버튼을 하나의 이벤트로 처리
-		-txtResult.Text = result.ToString(); 계산된 정수를 문자열로 변환하여 결과 표시
+		- int.Parse(txtDisplay.Text); 로 인한 텍스트 정수 변환
+		- Button btn = sender as Button; 로 클릭된 버튼을 Button 타입으로 변환
+		- btnNumber_Click에 참조를 여러개 연결해 여러 숫자 버튼을 하나의 이벤트로 처리
+		- txtResult.Text = result.ToString(); 계산된 정수를 문자열로 변환하여 결과 표시
+		- if (btn.Text == "÷")로 ÷ 버튼이면 currentOperator = "/"; 내부는 / 사용
+		- string displayOperator = currentOperator == "/" ? "÷" : currentOperator; 화면에는 ÷로 다시 표시
 
 ## 실행 화면 (과제1)
 	- 과제1 코드의 실행 스크린샷
@@ -46,3 +48,21 @@
 	- btnEqual_Click 속 내부 연산자로 계산 수행
 	- 0으로 나누기 방지
 	- 디스플레이 화면으론 /를 ÷으로 보이게 구현
+
+## 실행 화면 (과제3)
+	- 과제3 코드의 실행 스크린샷
+	![과제3 실행화면](img/4.png)(img/5.png)(img/6.png)(img/7.png)
+
+	- 과제 내용
+	- C 버튼
+	-  현재의 모든 내용을 삭제하고 처음 (초기화된) 상태로 되돌아감
+	- CE 버튼
+	- 마지막 입력한 피연산자(Operand) 값을 삭제함
+	- Del 버튼
+	-  마지막 입력된 글자 하나 (숫자 하나) 값을 삭제함
+
+	- 구현 내용과 기능 설명
+	- C 버튼을 누르면 현재의 모든 내용을 삭제
+	- CE 버튼을 연산자를 찾아 마지막 피연산자 삭제
+	- Del 버튼을 누르면 string에서 마지막 입력된 값을 삭제함
+	- 결과 값이 나온후 CE를 누르면 초기화
