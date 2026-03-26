@@ -20,7 +20,6 @@
 ## 실행 화면 (과제1)
 	- 과제1 코드의 실행 스크린샷
 <img width="1676" height="900" alt="1" src="https://github.com/user-attachments/assets/b87b8274-956a-461d-b407-4e3bae823e11" />
-
 	- 과제 내용
 	- TextBox(입력표시, 결과표시), Button(계산) 등을 적절히 배치
 	- 숫자 Button 클릭 시 TextBox에 표시합니다. 2가지 방법으로 표시
@@ -37,8 +36,8 @@
 ## 실행 화면 (과제2)
 	- 과제2 코드의 실행 스크린샷
 	
-	<img width="1675" height="902" alt="2" src="https://github.com/user-attachments/assets/83e1a1ba-0e35-4c4d-a201-b9066040a1a3" />
-	<img width="1676" height="875" alt="3" src="https://github.com/user-attachments/assets/7b24daf4-556b-4611-aa4d-5a5d26e75c17" />
+<img width="1675" height="902" alt="2" src="https://github.com/user-attachments/assets/83e1a1ba-0e35-4c4d-a201-b9066040a1a3" />
+<img width="1676" height="875" alt="3" src="https://github.com/user-attachments/assets/7b24daf4-556b-4611-aa4d-5a5d26e75c17" />
 
 
 	- 과제 내용
@@ -54,10 +53,10 @@
 
 ## 실행 화면 (과제3)
 	- 과제3 코드의 실행 스크린샷
-	<img width="1668" height="897" alt="4" src="https://github.com/user-attachments/assets/9ca6a62a-9210-4546-b0a6-57d2f2c0105c" />
-	<img width="1677" height="898" alt="5" src="https://github.com/user-attachments/assets/48a0f0c1-fca9-46c0-b6c1-0b2bf09d12f6" />
-	<img width="1650" height="852" alt="6" src="https://github.com/user-attachments/assets/314bf360-e0f8-4c3b-aebb-60d18bbfb209" />
-	<img width="1605" height="860" alt="7" src="https://github.com/user-attachments/assets/7bc35f44-d380-44dc-a3b6-218fd9a6b17b" />
+<img width="1668" height="897" alt="4" src="https://github.com/user-attachments/assets/9ca6a62a-9210-4546-b0a6-57d2f2c0105c" />
+<img width="1677" height="898" alt="5" src="https://github.com/user-attachments/assets/48a0f0c1-fca9-46c0-b6c1-0b2bf09d12f6" />
+<img width="1650" height="852" alt="6" src="https://github.com/user-attachments/assets/314bf360-e0f8-4c3b-aebb-60d18bbfb209" />
+<img width="1605" height="860" alt="7" src="https://github.com/user-attachments/assets/7bc35f44-d380-44dc-a3b6-218fd9a6b17b" />
 
 	- 과제 내용
 	- C 버튼
