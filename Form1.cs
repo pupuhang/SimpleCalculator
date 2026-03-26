@@ -101,12 +101,18 @@ namespace SimpleCalculator
 
         private void btnClearEntry_Click(object sender, EventArgs e)
         {
-
+            // 현재 입력값 전체 삭제
+            txtDisplay.Clear(); 
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            // 글자가 있을 때만 실행
+            if (txtDisplay.Text.Length > 0)
+            {
+                // 마지막 글자 제거
+                txtDisplay.Text = txtDisplay.Text.Substring(0, txtDisplay.Text.Length - 1); 
+            }
         }
     }
 }
