@@ -43,6 +43,9 @@
             btn9 = new Button();
             btn0 = new Button();
             btnAdd = new Button();
+            btnSub = new Button();
+            btnMul = new Button();
+            btnDiv = new Button();
             SuspendLayout();
             // 
             // txtDisplay
@@ -203,13 +206,49 @@
             btnAdd.TabIndex = 16;
             btnAdd.Text = "+";
             btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += btnAdd_Click;
+            btnAdd.Click += btnOperator_Click;
+            // 
+            // btnSub
+            // 
+            btnSub.Font = new Font("맑은 고딕", 16.2F, FontStyle.Bold);
+            btnSub.Location = new Point(377, 269);
+            btnSub.Name = "btnSub";
+            btnSub.Size = new Size(111, 67);
+            btnSub.TabIndex = 17;
+            btnSub.Text = "-";
+            btnSub.UseVisualStyleBackColor = true;
+            btnSub.Click += btnOperator_Click;
+            // 
+            // btnMul
+            // 
+            btnMul.Font = new Font("맑은 고딕", 16.2F, FontStyle.Bold);
+            btnMul.Location = new Point(377, 196);
+            btnMul.Name = "btnMul";
+            btnMul.Size = new Size(111, 67);
+            btnMul.TabIndex = 18;
+            btnMul.Text = "x";
+            btnMul.UseVisualStyleBackColor = true;
+            btnMul.Click += btnOperator_Click;
+            // 
+            // btnDiv
+            // 
+            btnDiv.Font = new Font("맑은 고딕", 16.2F, FontStyle.Bold);
+            btnDiv.Location = new Point(377, 123);
+            btnDiv.Name = "btnDiv";
+            btnDiv.Size = new Size(111, 67);
+            btnDiv.TabIndex = 19;
+            btnDiv.Text = "÷";
+            btnDiv.UseVisualStyleBackColor = true;
+            btnDiv.Click += btnOperator_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(500, 543);
+            Controls.Add(btnDiv);
+            Controls.Add(btnMul);
+            Controls.Add(btnSub);
             Controls.Add(btnAdd);
             Controls.Add(btn0);
             Controls.Add(btn9);
@@ -250,5 +289,8 @@
         private Button btn9;
         private Button btn0;
         private Button btnAdd;
+        private Button btnSub;
+        private Button btnMul;
+        private Button btnDiv;
     }
 }
