@@ -9,8 +9,10 @@ namespace SimpleCalculator
 
         // 첫 번째 숫자를 저장하는 변수
         int firstNumber = 0;
+        int secondNumber = 0;
         // 내부 연산자 저장 변수
         string currentOperator = "";
+        bool isOperatorClicked = false;
         // 여러 숫자 버튼을 하나의 이벤트로 처리
         private void btnNumber_Click(object sender, EventArgs e)
         {
@@ -30,10 +32,13 @@ namespace SimpleCalculator
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            //입력창이 비어있으면 연산을 수행하지 않음
-            if (txtDisplay.Text == "") return;
-            // 두 번째 숫자를 정수로 변환
-            int secondNumber = int.Parse(txtDisplay.Text);
+            if (!isOperatorClicked) return;
+
+            // 두 번째 숫자 추출
+            int opPos = txtDisplay.Text.IndexOf(" ");
+            string secondText = txtDisplay.Text.Substring(opPos + 3);
+            secondNumber = int.Parse(secondText);
+
             int result = 0; // 결과 변수
 
             // 내부 연산자로 계산 수행
@@ -63,8 +68,12 @@ namespace SimpleCalculator
             else if (currentOperator == "*")
                 displayOperator = "x";
 
-            // 계산식 표시
-            txtDisplay.Text = $"{firstNumber} {displayOperator} {secondNumber} = {result}";
+            //문자열 정수 변환
+            txtResult.Text = result.ToString();
+            //입력창 출력
+            txtDisplay.Text += " = " + result;
+            // 상태 초기화
+            isOperatorClicked = false;
         }
 
         private void btnOperator_Click(object sender, EventArgs e)
@@ -83,8 +92,10 @@ namespace SimpleCalculator
                 currentOperator = "*"; // 내부는 * 사용
             else
                 currentOperator = btn.Text; // 나머지는 그대로 사용
-            // 다음 입력을 위해 초기화
-            txtDisplay.Clear();
+            // 연산자 입력 상태로 변경
+            isOperatorClicked = true;
+            //화면에 입력 출력
+            txtDisplay.Text += " " + btn.Text + " ";
         }
 
         private void btnClear_Click(object sender, EventArgs e)
