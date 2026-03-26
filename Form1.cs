@@ -55,8 +55,14 @@ namespace SimpleCalculator
             // 결과를 문자열로 변환하여 결과창에 출력
             txtResult.Text = result.ToString();
 
-            // 화면에는 ÷로 다시 표시
-            string displayOperator = currentOperator == "/" ? "÷" : currentOperator;
+            // 화면에는 ÷와 x로 다시 표시
+            string displayOperator = currentOperator;
+
+            if (currentOperator == "/")
+                displayOperator = "÷";
+            else if (currentOperator == "*")
+                displayOperator = "x";
+
             // 계산식 표시
             txtDisplay.Text = $"{firstNumber} {displayOperator} {secondNumber} = {result}";
         }
@@ -72,7 +78,9 @@ namespace SimpleCalculator
 
             //버튼 Text를 내부 연산자로 변환
             if (btn.Text == "÷") // 나누기 버튼이면
-                currentOperator = "/"; // 내부는 / 사용
+                currentOperator = "/"; 
+            else if (btn.Text == "x") // 곱하기 버튼이면
+                currentOperator = "*"; // 내부는 * 사용
             else
                 currentOperator = btn.Text; // 나머지는 그대로 사용
             // 다음 입력을 위해 초기화
